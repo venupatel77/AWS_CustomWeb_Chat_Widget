@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Chat Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>My Website</h1>
+
+<p>Welcome to our application.</p>
+
+<!-- Floating Chat Button -->
+<button class="chat-button" onclick="openChat()">
+    💬
+</button>
+
+<!-- Chat Popup -->
+
+<div class="chat-popup" id="chatPopup">
+
+    <div class="chat-header">
+
+        <div>
+            <h3>Support Chat</h3>
+            <small>Online</small>
+        </div>
+
+        <span onclick="closeChat()">✖</span>
+
+    </div>
+
+    <div class="chat-body" id="chatMessages">
+
+        <div class="bot-message">
+            👋 Hi! How can I help you today?
+        </div>
+
+    </div>
+
+    <div class="chat-footer">
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Type your message...">
+
+        <button onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
