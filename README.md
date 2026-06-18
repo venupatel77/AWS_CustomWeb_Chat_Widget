@@ -1,8 +1,3 @@
-Here’s a clean **GitHub README.md** you can directly use. It explains what you have built so far (frontend + initial backend integration with Amazon Connect start chat).
-
----
-
-````markdown
 # Amazon Connect Custom Chat Widget (Frontend + StartChat Integration)
 
 ##  Project Overview
@@ -19,7 +14,6 @@ The goal is to simulate a real-time customer support chat system where:
 
 ##  Current Architecture (Implemented Phase)
 
-```text
 User Browser (HTML + JS Chat Widget)
         |
         |  Click "Start Chat"
@@ -38,9 +32,6 @@ Returns:
 - ContactId
 - ParticipantId
 - ParticipantToken
-````
-
----
 
 ## Tech Stack
 
@@ -82,7 +73,6 @@ Returns:
 
 ## User Flow (Current State)
 
-```text
 1. User opens web page
 2. Clicks  chat button
 3. Chat popup opens
@@ -92,60 +82,54 @@ Returns:
 7. Lambda calls Amazon Connect StartChatContact
 8. Amazon Connect returns session tokens
 9. Frontend stores session details
-```
 
----
 
 ##  Project Structure
 
-```
 AmazonConnectChat/
 │
 ├── index.html        # Chat UI
 ├── style.css         # Chat styling (popup UI)
 ├── script.js         # Chat logic + API call integration
 └── README.md
-```
 
----
+
 
 ##  AWS Backend API
 
 ### Endpoint
 
-```
+
 POST /start-chat
-```
 
 ### Request Body
 
-```json
+json
 {
   "displayName": "Customer"
 }
-```
 
 ### Response
 
-```json
+json
 {
   "ContactId": "xxx",
   "ParticipantId": "xxx",
   "ParticipantToken": "xxx"
 }
-```
 
----
+
+
 
 ## Lambda Function (Python)
 
 The Lambda function:
 
 * Receives request from API Gateway
-* Calls Amazon Connect `StartChatContact`
+* Calls Amazon Connect StartChatContact
 * Returns chat session details to frontend
 
----
+
 
 ##  What is NOT implemented yet (Next Phase)
 
@@ -167,11 +151,10 @@ The following features are planned:
 * Lex bot integration (optional)
 * Lambda-based business logic (e.g., account balance)
 
----
 
 ##  Future Architecture (Next Phase)
 
-```text
+
 Frontend Chat Widget
         |
         | Start Chat
@@ -189,7 +172,7 @@ WebSocket Channel
         |
         v
 Real-time Chat Messaging (Customer ↔ Agent/Bot)
-```
+
 
 ---
 
@@ -216,13 +199,12 @@ Built for learning and implementation of:
 
 ##  Status
 
-```
+
 Phase 1: UI + StartChatContact Integration ✅Completed
 Phase 2: Real-time Messaging (WebSocket) 🔄 In Progress
 Phase 3: Contact Flow + Bot Integration ⏳ Planned
-```
 
----
+
 
 ## 📌 Notes
 
@@ -231,5 +213,3 @@ Phase 3: Contact Flow + Bot Integration ⏳ Planned
 * Designed to be extended into production-grade chat system
 
 ```
-
----
